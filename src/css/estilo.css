@@ -1,0 +1,449 @@
+* {
+    text-align: center;
+}
+
+body {
+    background-image: url('../img/as-belas-estrelas-brilhando-no-ceu-noturno.jpg');
+    background-size: contain;
+}
+
+h1 {
+    font-family: 'Press Start 2P';
+    margin-top: 50px;
+    border: outset;
+    border-color: rgb(66, 169, 238);
+    border-radius: 20px;
+    background-image: url('../img/8ee7e419c03e41cbf7a2b21776cc9a2a.jpg');
+    padding: 30px;
+    color: black;
+}
+
+.apresentacao {
+    font-family: 'Press Start 2P';
+    font-weight:bold;
+    color: rgb(26, 172, 240);
+    padding: 2px;
+    line-height: 40px;
+    font-size: x-large;
+    text-align: center;
+    letter-spacing: 6px;
+}
+
+.glow-on-hover {
+    width: 150px;
+    height: 150px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.conteudo {
+    border: outset rgb(26, 172, 240);
+    border-width: 20px;
+    padding: 40px;
+    font-family: 'Playpen Sans';
+    color: rgb(26, 172, 240);
+    line-height: 40px;
+    font-size: x-large;
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: repeat;
+    letter-spacing: 2px;
+    border-style: outset;
+}
+
+.level {
+    padding: 40px;
+    margin: 80px;
+    font-family: 'Playpen Sans';
+    color: white;
+    font-size: x-large;
+    background-image: url('../img/8b2f6e17fe068081554c00d4e56b309f.jpg');
+    background-position: center;
+    background-repeat: repeat;
+    align-items: center;
+}
+
+.card {
+    line-height: 40px;
+    font-family: 'Playpen Sans';
+    font-size: xx-large;
+    list-style-type: none;
+}
+
+#form {
+    border: outset rgb(26, 172, 240);
+    font-family: 'Playpen Sans';
+    font-size: large;
+    color: black;
+    background-image: url('../img/unruly-heroes-02.jpg');
+    background-position: center;
+    background-repeat: repeat;
+    max-width: 800px;
+    height: 450px;
+    padding: 40px 20px;
+    border-radius: 40px;
+    margin: 0 auto;
+}
+
+.input {
+    margin: 40px;
+    font-family: 'Press Start 2P';
+    border: solid black;
+    padding: 9px;
+    border-radius: 30px;
+    background-image: url('../img/unruly-heroes-02.jpg');
+    background-position: center;
+}
+
+form p {
+    margin: 20px;
+    line-height: 30px;
+    font-family: 'Press Start 2P';
+    border: solid black;
+    color: white;
+    padding: 12px;
+    border-radius: 30px;
+    background-color: black;
+}
+
+
+.mapa, #redes {
+    font-family: 'Press Start 2P';
+    color: white;
+    padding: 20px;
+    font-size: large;
+    letter-spacing: 3px;
+}
+
+header {
+    display: flex;
+}
+
+.menu {
+    list-style:none;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    background-image: url('../img/8ee7e419c03e41cbf7a2b21776cc9a2a.jpg');
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: 40px;
+    font-family: 'Press Start 2P';
+    width: 1350px;
+    border: outset rgb(26, 172, 240);
+    border-radius: 5%;
+}
+
+.menu li{
+    position:relative;
+    float:left;
+}
+
+.menu li a{
+    color:#333; 
+    text-decoration:none; 
+    padding:5px 10px; 
+    display:block;
+}
+
+.menu li a:hover{
+color:#4025b9;
+}
+
+.menu li  ul{
+    position:absolute;
+    top:25px;
+    left:0;
+    background-image: url('../img/unruly-heroes-02.jpg');
+    display:none;
+}
+
+.menu li:hover ul, .menu li.over ul {
+    display:block;
+    color: rgb(77, 124, 179);
+}
+
+.menu li ul li{
+    display:block;
+    width:150px;
+    padding: 10px;
+    background-image: url('../img/unruly-heroes-02.jpg');
+}
+
+a, .menu {
+    color: rgb(233, 73, 206);
+    text-decoration: none;
+    padding-bottom: 20px;
+    font-family: 'Press Start 2P';
+    font-size: large;
+}
+
+.level p {
+    border: solid black;
+    padding: 10px;
+    background-color: black;
+    font-family: 'Press Start 2P';
+    color: rgb(26, 172, 240);
+    border-radius: 20px;
+    text-align: center;
+    margin: 60px;
+    position: relative;
+    line-height: 40px;
+} 
+
+.level a img {
+    border: outset rgb(26, 172, 240);
+    background-color: black;
+    text-align: center;
+    border-radius: 10%;
+}
+
+.level {
+    max-width: 1200px;
+    height: 450px;
+    align-items: center;
+    text-align: center;
+    margin-left: 140px;
+    border-radius: 20px;
+}
+
+.start {
+    border: outset rgb(26, 172, 240);
+}
+
+a:hover {
+    color: rgb(0, 255, 13);
+}
+
+section ul {
+    list-style-type: none;
+}
+
+
+footer #redes img {
+    width: 40px;
+    height: 40px;
+    display: inline;
+    padding-top: 20px;
+}
+
+footer {
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+#copywrite {
+    font-family: 'Press Start 2P';
+    font-size: medium;
+    color: white;
+    font-size: x-large;
+    padding-top: 10px;
+}
+
+#div {
+    background-color: rgb(26, 172, 240);
+    font-size: large ;
+    cursor: pointer;
+    width: 140px;
+    height: 60px;
+    border-radius: 10px;
+    color: black;
+    margin-left: 650px;
+}
+
+#div p {
+    font-family: 'Press Start 2P';
+    align-items: center;
+    padding: 20px;
+}
+
+.video {
+    padding-top: 40px;
+}
+
+#projetos {
+    padding-bottom: 40px;
+}
+
+h2 {
+    border: outset pink;
+    background-color: black;
+    color: pink;
+    font-size: xx-large;
+    margin: 20px 180px;
+    margin-top: 80px;
+    padding: 12px;
+    border-radius: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 8px;
+    margin: 5px;
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+.container {
+    padding: 2px 6px;
+}
+ 
+.carousel {
+    width: 38%;
+    padding: 5px;
+    height: 450px;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    position:sticky;
+    display: none;
+}
+
+.slide img {
+    width: 80%;
+    height: 38%;
+    object-fit: cover;
+    margin-left:480px;
+    padding: 10px;
+}
+  
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 390px;
+}
+
+.navigation label {
+    width: 20px;
+    height: 20px;
+    background-color: #fc2bd9;
+    border-radius: 20%;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+#slide1:checked ~ .slides .slide:nth-child(1),
+#slide2:checked ~ .slides .slide:nth-child(2),
+#slide3:checked ~ .slides .slide:nth-child(3),
+#slide4:checked ~ .slides .slide:nth-child(4),
+#slide5:checked ~ .slides .slide:nth-child(5),
+#slide6:checked ~ .slides .slide:nth-child(6) {
+    display: block;
+}
+
+.carousel input{
+    display: none;
+}
+
+@media (min-width:320px) and (max-width:480px) {
+    .slides, .slides img {
+        height: 200px;
+        margin-left: -10px;
+        width: 300px;
+    }
+
+    .navigation {
+        margin-top: 20px;
+        margin-left: 60px;
+    }
+
+    .navigation label {
+        width:100px;
+        padding: 5px;
+        height: 20px;
+    }
+
+    .menu {
+        width: 450px;
+        margin-left: 0px;
+        font-size: 10px;
+    }
+
+    .level {
+        height: 650px;
+        width: 300px;
+        margin-left: 2px;
+    }
+
+    h2 {
+        width: 150px;
+        margin-left: 50px;
+    }
+
+    #div {
+        margin-left: 70px;
+        margin-top: 20px;
+    }
+
+    #form {
+        width: 300px;
+        height: 600px;
+    }
+    
+}
